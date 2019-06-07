@@ -34,7 +34,7 @@ use function student_lib\get_active_semesters;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 /**
- *
+ * Obtains the name of every semester after the selected cohort
  * @param $id_instance
  * @param $ases_cohort_id
  * @param bool $include_current_semester
@@ -137,8 +137,7 @@ function get_report_active_semesters($id_instance, $ases_cohort_id, $include_cur
         "columns" => $columns,
         "data" => $data,
         "language" => $common_language_config,
-        "semesters" => $semester_names,
-        "order"=> array($nombre_index_column, "desc"),
+        "order"=> array($nombre_index_column, "asc"),
         "dom"=>'lifrtpB',
         "buttons"=>array(
             array(
