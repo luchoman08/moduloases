@@ -159,11 +159,7 @@ class ActiveSemestersReportField {
     }
 
     public function have_active_semester($semester): bool {
-       if(array_search($semester, $this->semestres_activos) === false) {
-           return false;
-       }
-       return true;
-
+       return in_array($semester, $this->semestres_activos);
     }
 }
 
